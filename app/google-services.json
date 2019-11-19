@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "888538162412",
+    "firebase_url": "https://mini-project-d2435.firebaseio.com",
+    "project_id": "mini-project-d2435",
+    "storage_bucket": "mini-project-d2435.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:888538162412:android:2fd42aeed8a4f652",
+        "android_client_info": {
+          "package_name": "com.example.bca_messenger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "888538162412-164tq0v94j0m7m8tl1baqo1sstqgqk54.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bca_messenger",
+            "certificate_hash": "a950be9c52cbe40937f1ed3892cfbaf22fdae97a"
+          }
+        },
+        {
+          "client_id": "888538162412-vjmmp7o4mi3e9go4an02eufcc8ipp9k7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCk8klovzsdCqc3IIq1bvfu0VQtTru3UAw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "888538162412-vjmmp7o4mi3e9go4an02eufcc8ipp9k7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

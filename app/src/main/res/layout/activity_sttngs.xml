@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleimage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/usr"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/circleimage"
+        android:text="Hello"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:paddingLeft="20dp"
+        android:id="@+id/name"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/circleimage"
+        android:text="Hi how r u"
+        android:layout_below="@+id/name"
+        android:textSize="20dp"
+        android:paddingLeft="20dp"
+        android:id="@+id/bio"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@+id/circleimage"
+        android:layout_marginTop="25dp"
+        android:id="@+id/seprator"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/account"
+        android:layout_below="@id/seprator"
+        android:layout_marginTop="25dp"
+        android:text="Account"
+        android:textStyle="italic"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:drawableLeft="@drawable/ic_mail_black_24dp"
+        android:drawablePadding="20dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/psswd"
+        android:layout_below="@+id/account"
+        android:text="Change Password"
+        android:drawableLeft="@drawable/ic_vpn_key_black_24dp"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:layout_marginTop="25dp"
+        android:drawablePadding="20dp"
+        android:textColor="#000"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/admin"
+        android:layout_below="@id/psswd"
+        android:text="Admin"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:drawableLeft="@drawable/ic_person_black_24dp"
+        android:drawablePadding="20dp"
+        android:textColor="#000"
+        android:layout_marginTop="25dp"
+        android:visibility="gone"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/admin"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="70dp"
+        android:id="@+id/sep"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/out"
+        android:layout_below="@+id/sep"
+        android:text="Log Out"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:textColor="#000"
+        android:layout_marginTop="25dp"
+        android:drawableLeft="@drawable/ic_exit_to_app_black_24dp"
+        android:drawablePadding="20dp"/>
+
+
+
+
+
+</RelativeLayout>

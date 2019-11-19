@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".settingsActivity">
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordilantorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsingToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="?attr/colorPrimaryDark"
+                app:expandedTitleMarginEnd="64dp"
+                app:expandedTitleMarginStart="48dp"
+                app:layout_scrollFlags="exitUntilCollapsed|scroll"
+                app:title="Settings">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                </android.support.v7.widget.Toolbar>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_camera_alt_black_24dp"
+            app:backgroundTint="#ffffff"
+            app:layout_anchor="@id/appBar"
+            app:layout_anchorGravity="right|bottom|end" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/infoCardSetting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:background="@drawable/row_bg">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/infoCS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:text="Info"
+                            android:textColor="#153B50"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:errorEnabled="true">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/nameCS"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Name"
+                                android:inputType="text"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingRight="10dp"
+                                android:textAlignment="center"/>
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:errorEnabled="true">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/emailCS"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="E-mail"
+                                android:inputType="textEmailAddress"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingRight="10dp"
+                                android:textAlignment="center"/>
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:errorEnabled="true">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/bioCS"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Bio"
+                                android:inputType="text"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingRight="10dp"
+                                android:textAlignment="center"/>
+                        </android.support.design.widget.TextInputLayout>
+                        <Button
+                            android:id="@+id/saveCS"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#153B50"
+                            android:paddingTop="5dp"
+                            android:text="Save Details"
+                            android:textColor="#ffffff" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/accountCardSetting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/row_bg"
+                    app:layout_constraintEnd_toEndOf="@+id/infoCardSetting"
+                    app:layout_constraintStart_toStartOf="@+id/infoCardSetting"
+                    app:layout_constraintTop_toBottomOf="@+id/infoCardSetting">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:text="Account"
+                            android:textColor="#153B50"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:errorEnabled="true">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/currentCS"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Current Password"
+                                android:inputType="text"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingRight="10dp"
+                                android:textAlignment="center"/>
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:errorEnabled="true">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/newCS"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="New Password"
+                                android:inputType="textEmailAddress"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingRight="10dp"
+                                android:textAlignment="center"/>
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:errorEnabled="true">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/reCS"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Re-enter New Password"
+                                android:inputType="text"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingRight="10dp"
+                                android:textAlignment="center" />
+                        </android.support.design.widget.TextInputLayout>
+                        <Button
+                            android:id="@+id/changeCS"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#153B50"
+                            android:paddingTop="5dp"
+                            android:text="Change Password"
+                            android:textColor="#ffffff" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/AdminCardSetting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/row_bg"
+                    app:layout_constraintEnd_toEndOf="@+id/changeCS"
+                    app:layout_constraintStart_toStartOf="@+id/changeCS"
+                    app:layout_constraintTop_toBottomOf="@+id/changeCS">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:text="Admin"
+                            android:textColor="#153B50"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/adduser"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_person_black_24dp"
+                            android:drawablePadding="10dp"
+                            android:drawableRight="@drawable/ic_create_black_24dp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="20dp"
+                            android:text="Add User"
+                            android:textColor="#153B50"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:layout_marginEnd="10dp"/>
+                        <TextView
+                            android:id="@+id/rmuser"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_delete_black_24dp"
+                            android:drawablePadding="10dp"
+                            android:drawableRight="@drawable/ic_create_black_24dp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="20dp"
+                            android:text="Add User"
+                            android:textColor="#153B50"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:layout_marginEnd="10dp"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="0dp"
+    android:layout_marginLeft="4dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_marginRight="4dp"
+    android:layout_marginBottom="16dp"
+    >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="65dp"
+
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:id="@+id/relative">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/buttonSent"
+            android:gravity="top"
+            android:hint="Type a message"
+            android:imeOptions="actionSend"
+            android:layout_alignBottom="@+id/buttonSent"
+            android:id="@+id/etMessage"
+            />
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonSent"
+            android:gravity="center_vertical|right"
+            android:paddingRight="10dp"
+            android:text="Send"
+            android:textSize="18sp"
+            android:layout_alignParentRight="true"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:src="@drawable/ic_send_black_24dp"
+            app:backgroundTint="#153B50"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
